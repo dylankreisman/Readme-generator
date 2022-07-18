@@ -1,9 +1,7 @@
 // TODO: imported inquirer
 const inquirer = require('inquirer')
-const util = require('util')
 const fs = require('fs')
 const generateMarkdown = require('Develop/utils/generateMarkdown.js')
-const writeFileSync = util.promisify(fs.writeFile);
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -12,7 +10,7 @@ const questions = [
         message: 'Create a title'
     },
     {
-        name: 'Table of Content',
+        name: 'Table of Contents',
         type: 'input',
         message: 'Make a list for your Table of Contents'
     },
