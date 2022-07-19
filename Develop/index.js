@@ -1,7 +1,7 @@
 // TODO: imported inquirer
 const inquirer = require('inquirer')
 const fs = require('fs')
-const generateMarkdown = require('Develop/utils/generateMarkdown.js')
+const generate = require('./utils/generateMarkdown.js')
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -42,7 +42,7 @@ function init() {
     inquirer.prompt(questions).then((res) => {
         console.log(res);
         const { name } = res
-        writeToFile('generateMarkdown.js', generateMarkdown(answers));
+        writeToFile('generateMarkdown.js', generate(answers));
     })
 }
 
