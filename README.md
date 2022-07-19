@@ -17,7 +17,7 @@ Start with installing inquirer along with the FS and generateMarkdown packages. 
 After that, create a function in the generateMarkdown.js and use temperate literals to outline the README sections.
 
 ### Video
-![Walkthrough video](https://youtu.be/cwvyCjbcPJ0)
+![Walkthrough video](assets\readme-walkthrough.mp4)
 
 ## Questions
 Here are some links to connect or ask questions if you'd like:
