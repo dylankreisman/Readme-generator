@@ -29,8 +29,8 @@ function generateMarkdown(res) {
   ${res.instructions}
 
   ## Questions
-  ${res.email}
-  ${res.github}
+  - ${res.email}
+  - ${res.github}
 `;
 }
 
