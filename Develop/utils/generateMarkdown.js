@@ -16,18 +16,32 @@ function generateMarkdown(res) {
   ${res.title}
 
   ## Table of Contents
-  ${res.table}
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [License](#License)
+  * [Contributing](#Contribution)
+  * [Tests](#Tests)
+  * [Questions](#Questions)
+  
 
-  ##${res.license}
+  ## Installation
 
-  ## Usage Instructions
+  ## License
+  (https://img.shields.io/badge/license-${res.license}-blue)
+ 
+
+  ## Usage
   ${res.usage}
 
-  ## Contribution Guidelines
+  ## Contribution
   ${res.contribution}
 
-  ## Test Instructions
+  ## Tests
   ${res.instructions}
+
+  ## Questions
+  ${res.email}
+  ${res.github}
 `;
 }
 

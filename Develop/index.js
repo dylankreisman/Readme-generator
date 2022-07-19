@@ -28,7 +28,24 @@ const questions = [
         name: 'instructions',
         type: 'input',
         message: 'Write here how to detail test instructions'
-    }
+    },
+    {
+        name: 'email',
+        type: 'input',
+        message: 'Enter your email'
+    },
+    {
+        name: 'github',
+        type: 'input',
+        message: 'Enter your GitHub username'
+    },
+    {
+        name: 'license',
+        type: 'list',
+        message: 'Choose which license you would like to include',
+        choices: ['MIT', 'Apache', 'None']
+    },
+
 ];
 
 // TODO: Create a function to write README file
@@ -41,8 +58,8 @@ function writeToFile(fileName, res) {
 function init() {
     inquirer.prompt(questions).then((res) => {
         console.log(res);
-        const { name } = res
-        writeToFile('generateMarkdown.js', generate(answers));
+        //const { name } = res
+        writeToFile('README.md', generate(res));
     })
 }
 
