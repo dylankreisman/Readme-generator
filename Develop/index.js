@@ -10,30 +10,30 @@ const questions = [
         message: 'Create a title'
     },
     {
-        name: 'Table of Contents',
+        name: 'table',
         type: 'input',
         message: 'Make a list for your Table of Contents'
     },
     {
-        name: 'Usage Information',
+        name: 'usage',
         type: 'input',
-        message: 'Make a list for your Table of Contents'
+        message: 'You can put in your usage information here'
     },
     {
-        name: 'Contribution Guidelines',
+        name: 'contribution',
         type: 'input',
         message: 'Add in your contribution guidelines'
     },
     {
-        name: 'Test Instructions',
+        name: 'instructions',
         type: 'input',
         message: 'Write here how to detail test instructions'
     }
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) =>
+function writeToFile(fileName, res) {
+    fs.writeFile(fileName, res, (err) =>
     err ? console.err(err) : console.log('Readme'))
 }
 
@@ -42,7 +42,7 @@ function init() {
     inquirer.prompt(questions).then((res) => {
         console.log(res);
         const { name } = res
-        writeToFile(`${name}.js`, generateMarkdown(answers));
+        writeToFile('generateMarkdown.js', generateMarkdown(answers));
     })
 }
 
