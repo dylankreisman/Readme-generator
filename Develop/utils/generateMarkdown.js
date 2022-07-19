@@ -27,7 +27,7 @@ function generateMarkdown(res) {
   ## Installation
 
   ## License
-  (https://img.shields.io/badge/license-${res.license}-blue)
+  ![License](https://img.shields.io/badge/license-${res.license}-blue)
  
 
   ## Usage
